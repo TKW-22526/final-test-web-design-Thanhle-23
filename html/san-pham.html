@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Sản phẩm</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="../css/style.css">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    </head>
+    <body onload="loadAllProduct()">
+        <div class="back">
+            <a href="../index.html" class="bk">
+            <span class="nut">&#8592;</span> Quay lại trang chủ
+            </a>
+        </div>
+        <label for="moPopupGioHang" class="giohang">
+            Giỏ hàng của tôi
+        </label>
+        <input type="checkbox" id="moPopupGioHang" hidden>
+        <div class="popup">
+            <div class="pbox">
+                
+                <div class="pchu">
+                    <h2 class="pgio">Giỏ hàng</h2>
+                    <label for="moPopupGioHang" class="closepop">✖</label>
+                </div>
+
+                <div id="khungds" class="plistcont">
+                </div>
+
+                <div class="ptong">
+                    Tổng tiền: <span id="tongtien" class="ptien">0 đ</span>
+                </div>
+
+                <button class="thanhtoan">Thanh toán</button>
+                
+            </div>
+        </div>
+        
+        <div class="container mt-4">
+            <h1 class="fw-bold mb-3">Trending songs </h1>
+            <div id="trend-list" class="row mb-5">
+            </div>
+            <h1 class="fw-bold mb-3">Top albums </h1>
+            <div id="alb-list" class="row mb-5">
+            </div>    
+            <h1 class="fw-bold mb-3">New songs </h1>
+            <div id="new-list" class="row mb-5">
+            </div>
+        </div>
+
+        <label for="moPopupThemSP" class="nutthem">
+        Thêm bài hát
+        </label>
+
+        <input type="checkbox" id="moPopupThemSP" hidden>
+
+        <div class="popupthem">
+            <div class="pbox">
+                
+                <div class="pchu">
+                    <h2 class="pgio"> Thêm Nhạc Mới</h2>
+                    <label for="moPopupThemSP" class="closepop">✖</label>
+                </div>
+
+                <div class="themsp" style="margin-top: 15px;">
+                    <input type="text" id="tenSPMoi" placeholder="Tên bài hát..." class="nhapthemsp">
+                </div>
+                <div class="themsp">
+                    <input type="text" id="ngheSiSPMoi" placeholder="Tên ca sĩ / Nghệ sĩ..." class="nhapthemsp">
+                </div>
+                <div class="themsp">
+                    <input type="number" id="giaSPMoi" placeholder="Giá bán (VNĐ)..." class="nhapthemsp">
+                </div>
+                <div class="themsp">
+                    <input type="text" id="anhSPMoi" placeholder="Link ảnh (VD: ../assets/images/hinh.jpg)" class="nhapthemsp">
+                </div>
+
+                <button class="nutxacnhan" onclick="themSanPham()" style="width: 100%; margin-top: 15px;">Xác nhận thêm</button>
+                
+            </div>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="../js/script.js"></script>
+    </body>
+</html>

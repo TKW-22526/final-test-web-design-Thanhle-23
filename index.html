@@ -1,0 +1,107 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+    <head>
+        <title>Thiết kế web</title>
+        <meta charset="utf-8">
+        <link rel="stylesheet" href="css/stylein.css">
+    </head>
+    <body>
+        <header class="header">
+            <div class="hcontainer">
+                
+                <a href="index.html" class="hlogo">
+                    <img src="assets/images/logo.jpg" alt="Music Logo">
+                    <span class="bname">Music</span>
+                </a>
+
+                <div class="htim">
+                    
+                    <input type="text" id="timKiem" placeholder="Bạn muốn nghe gì hôm nay?">
+                </div>
+
+                <div class="hlog">
+                    <label for="pLog" class="log" style="cursor: pointer;">Đăng nhập</label>
+                </div>
+                <input type="checkbox" id="pLog" hidden>
+
+                <div class="login">
+                    <div class="logbox">
+                        <label for="pLog" class="close">✖</label>
+                        
+                        <h2 style="text-align: center; color: #8b2b22; margin-bottom: 20px;">Đăng Nhập</h2>
+                        
+                        <form>
+                            <label style="font-weight: bold; font-size: 14px;font-family: Arial, sans-serif;">Tài khoản:</label>
+                            <input type="text" class="loginp" placeholder="Nhập tài khoản" required>
+                            
+                            <label style="font-weight: bold; font-size: 14px;font-family: Arial, sans-serif;">Mật khẩu:</label>
+                            <input type="password" class="loginp" placeholder="Nhập mật khẩu" required>
+                            
+                            <input type="submit" value="Đăng Nhập" class="sub">
+                            
+                            <div class="loglink">
+                                <a href="#">Quên mật khẩu?</a>
+                                <a href="#">Tạo tài khoản</a>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                
+            </div>
+        </header>
+        <div class="lcontainer">      
+            <aside class="menu">
+                <h3 class="ten">Music</h3>
+                <ul class="list">
+                    <li>
+                        <a href="html/gioi-thieu.html" class="ds">Giới thiệu</a>
+                    </li>
+                    <li>
+                        <a href="html/san-pham.html" class="ds">Sản phẩm</a>
+                    </li>
+                    <li>
+                        <a href="html/lien-he.html" class="ds">Liên hệ</a>
+                    </li>
+                </ul>
+            </aside>
+
+            <main >          
+            <div class="vanban" style="padding-right: 40px; margin-top: 50px;">
+                <h1 style="font-size: 52px; font-weight: bold; color: #212529; margin-bottom: 20px; line-height: 1.2;">
+                Đắm chìm vào <br><span style="color: #8b2b22;">thế giới âm thanh</span>
+                </h1>
+        
+                <p style="font-size: 18px; color: #6c757d; line-height: 1.6; margin-bottom: 35px;">
+                Khám phá kho nhạc số với các album và bản hit bản quyền. Chọn những tác phẩm yêu thích, xây dựng bộ sưu tập cá nhân và trân trọng từng giai điệu nguyên bản.            </p>
+        
+                <div>
+                    <a href="html/san-pham.html" style="display: inline-block; background-color: #8b2b22; color: white; padding: 14px 35px; border-radius: 50px; text-decoration: none; font-weight: bold; font-size: 16px; transition: 0.3s;">
+                    Khám phá ngay
+                    </a>
+                </div>
+            </div>
+            </main>
+
+            <section class="invi">
+                <video autoplay muted loop playsinline class="vi">
+                <source src="assets/images/ms.mp4" type="video/mp4">
+                Trình duyệt của bạn không hỗ trợ video.
+                </video>
+            </section>
+
+        </div>
+        <footer class="footer">
+            <div class="fchu">
+                <p>Lê Quốc Quyền Thanh</p>
+                <p>|</p>
+                <p>Lớp: DA24TTA - MSSV: 110124168</p>
+                <p>|</p>
+                <p>Đại học Trà Vinh</p>
+                <p>|</p>
+                <p>Email: lequocquyenthanh@gmail.com</p>
+            </div>
+            
+        </footer>
+        
+    </body>
+</html>

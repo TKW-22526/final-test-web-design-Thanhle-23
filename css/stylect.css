@@ -1,0 +1,204 @@
+
+.khunghinh {
+    background-color: #ffffff; 
+    padding: 16px;             
+    text-align: center;        
+    border: 1px solid #e0e0e0; 
+    border-radius: 8px;        
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05); 
+}
+
+
+#hinh {
+    max-width: 100%;           
+    height: auto;              
+    border-radius: 8px;        
+    max-height: 400px;         
+    object-fit: contain;       
+}
+
+
+.ten {
+    font-weight: bold;
+    color: #212529;
+    margin-bottom: 12px;
+}
+
+.ten1 {
+    font-weight: bold;
+    color: #495057; 
+    margin-bottom: 20px;
+}
+
+.khunggia {
+    background-color: #f8f9fa;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+}
+
+.giatien {
+    color: #930d1a; 
+    font-weight: bold;
+    font-size: 32px;
+    margin: 0; 
+}
+
+/* Phần mô tả */
+.khungmota {
+    font-weight: 600;
+    font-size: 18px;
+    margin-bottom: 10px;
+    color: #212529;
+}
+
+.motact {
+    color: #6c757d;
+    line-height: 1.8; 
+    margin-bottom: 24px;
+}
+
+
+.nutmuathem {
+    display: flex;
+    gap: 16px; 
+    margin-top: 24px;
+}
+
+.nutct {
+    width: 50%; 
+    padding: 12px 20px; 
+    font-size: 16px;
+    font-weight: bold;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase; 
+    transition: all 0.3s ease; 
+}
+
+.them {
+    background-color: transparent;
+    color: #81141e;
+    border: 2px solid #660c15;
+}
+
+.them:hover {
+    background-color: #6c0c16;
+    color: #ffffff;
+}
+
+.mua {
+    background-color: #790d18;
+    color: #ffffff;
+    border: 2px solid #7a0f1a;
+}
+
+.mua:hover {
+    background-color: #ab434d; 
+    border-color: #b63c48;
+}
+.back {
+    margin: 30px 10px;
+}
+.bk {
+    display: inline-flex;       
+    align-items: center;
+    gap: 8px;                   
+    padding: 10px 24px;        
+    background-color: transparent; 
+    color: #b3b3b3;            
+    text-decoration: none;      
+    font-size: 15px;
+    font-weight: 600;
+    border: 1px solid #535353;  
+    border-radius: 50px;        
+    transition: all 0.3s ease; 
+}
+
+.bk:hover {
+    color: #000000;             
+    border-color: #000000;      
+    background-color: rgba(255, 255, 255, 0.05); 
+    transform: translateX(-5px); 
+}
+
+/*popup gio hang*/
+.popup {
+    position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0,0,0,0.5); z-index: 2000;
+    display: flex; justify-content: center; align-items: center;
+    opacity: 0; visibility: hidden; transition: 0.3s;
+}
+#moPopupGioHang:checked ~ .popup{
+    opacity: 1; visibility: visible;
+}
+
+.pbox {
+    background: white; width: 450px; padding: 20px;
+    border-radius: 12px; box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+}
+
+.pchu {
+    display: flex; justify-content: space-between; align-items: center;
+    border-bottom: 2px solid #eee; padding-bottom: 10px; margin-bottom: 15px;
+}
+.pgio { margin: 0; color: #8b2b22; font-size: 24px; }
+.closepop { cursor: pointer; font-size: 20px; color: #666; }
+.closepop:hover { color: #8b2b22; }
+
+.plistcont {
+    max-height: 300px; overflow-y: auto; padding-right: 10px;
+}
+
+.sprow {
+    display: flex; gap: 15px; align-items: center;
+    margin-bottom: 15px; border-bottom: 1px solid #eee; padding-bottom: 10px;
+}
+.spimg {
+    width: 55px; height: 55px; border-radius: 5px;
+    object-fit: cover; background: #ccc;
+}
+.spdetails { flex-grow: 1; }
+.spname { margin: 0 0 5px 0; font-size: 16px; }
+.spprice { margin: 0; color: #8b2b22; font-weight: bold; }
+
+.soluongsp {
+    display: flex; align-items: center; gap: 10px;
+    border: 1px solid #ccc; padding: 5px 10px; border-radius: 5px;
+}
+.trucong { cursor: pointer; border: none; background: none; font-weight: bold; font-size: 16px; color: #333; }
+.slhientai { font-weight: bold; width: 20px; text-align: center; }
+
+.ptong {
+    margin-top: 20px; border-top: 2px solid #eee; padding-top: 15px;
+    text-align: right; font-size: 20px; font-weight: bold; color: #333;
+}
+.ptien { color: #8b2b22; }
+
+.thanhtoan {
+    width: 100%; background: #8b2b22; color: white;
+    border: none; padding: 12px; border-radius: 8px;
+    font-weight: bold; margin-top: 15px; cursor: pointer; transition: 0.2s;
+}
+.thanhtoan:hover { background: #6b211a; }
+.giohang {
+    position: fixed; 
+    top: 20px;       
+    right: 30px;     
+    z-index: 999;      
+    cursor: pointer;
+    font-weight: bold;
+    color: #ffffff;
+    background-color: #842020; 
+    padding: 12px 20px;
+    border-radius: 8px; 
+    
+    transition: all 0.3s ease;
+}
+
+
+.giohang:hover {
+    background-color: #631717; 
+    transform: translateY(-2px); 
+    box-shadow: 0 6px 15px rgba(132, 32, 32, 0.4);
+}
