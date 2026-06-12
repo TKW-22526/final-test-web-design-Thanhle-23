@@ -254,3 +254,59 @@
     text-decoration: none;
 }
 .loglink a:hover { text-decoration: underline; }
+
+#popupTimKiem {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    background-color: #ffffff;
+    max-height: 350px;
+    overflow-y: auto;
+    box-shadow: 0px 5px 15px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    z-index: 9999;
+    display: none; /* Mặc định ẩn */
+    margin-top: 25px;
+}
+
+.baitk {
+    display: block;
+    padding: 12px 15px;
+    border-bottom: 1px solid #eee;
+    text-decoration: none;
+    color: #333;
+    cursor: pointer;
+    transition: background 0.2s; 
+}
+
+.baitk:hover {
+    background-color: #f5f5f5;
+}
+
+.baitk .tensp {
+    font-weight: bold;
+    font-size: 15px;
+    margin-bottom: 4px;
+    font-family: Arial, sans-serif;
+
+}
+
+.baitk .thongtinsp {
+    font-size: 13px;
+    color: #666;
+    font-family: Arial, sans-serif;
+}
+
+.baitk .giasp {
+    color: rgb(151, 24, 24);
+    font-weight: bold;
+    font-family: Arial, sans-serif;
+}
+
+
+.loitk {
+    padding: 15px;
+    text-align: center;
+    color: rgb(169, 28, 28);
+    font-weight: bold;
+}

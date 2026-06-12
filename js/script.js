@@ -71,7 +71,7 @@ const trendList = [
     },
     {
         id:4,
-        name: "Taylor Swift",
+        name: "Opalite",
         name1: "Taylor Swift",
         price: 59000,
         img: "../assets/images/ts.jpg",
@@ -176,6 +176,7 @@ function luuGioHang() {
 
 function xuatDSgioHang() {
     const khung = document.getElementById('khungds');
+    if (!khung) return;
     khung.innerHTML = ''; 
     let tongTien = 0;
 
@@ -332,3 +333,63 @@ function themSanPham() {
     document.getElementById('moPopupThemSP').checked = false;
     alert("Thêm bài hát '" + ten + "' lên kệ thành công!");
 }
+document.addEventListener("DOMContentLoaded", () => {
+    xuatDSgioHang();
+
+    const oTimKiem = document.getElementById("timKiem");
+    if (!oTimKiem) return; 
+
+    const popup = document.createElement("div");
+    popup.id = "popupTimKiem"; 
+    
+    oTimKiem.parentNode.style.position = "relative"; 
+    oTimKiem.parentNode.appendChild(popup);
+
+    oTimKiem.addEventListener("input", function() {
+        let tuKhoa = oTimKiem.value.toLowerCase().trim();
+        const tatCaSanPham = [...trendList, ...albList, ...newList];
+        
+        popup.style.width = oTimKiem.offsetWidth + "px";
+
+        if (tuKhoa === "") {
+            popup.style.display = "none";
+            return;
+        }
+
+        let ketQua = tatCaSanPham.filter(sp => 
+            sp.name.toLowerCase().includes(tuKhoa) || 
+            sp.name1.toLowerCase().includes(tuKhoa) 
+        );
+        
+        popup.innerHTML = "";
+        
+        if (ketQua.length > 0) {
+            ketQua.forEach(sp => {
+                let urlLink = sp.link; 
+                let sualink = window.location.pathname.includes("/html/");
+                if (!sualink) {
+                    urlLink = "html/" + urlLink; 
+                }
+
+                const item = document.createElement("a");
+                item.href = urlLink + "?id=" + sp.id;
+                item.className = "baitk"; 
+                
+                item.innerHTML = '<div class="tensp">' + sp.name + '</div>' + 
+                                 '<div class="thongtinsp">' + sp.name1 + ' - <span class="giasp">' + sp.price.toLocaleString() + 'đ</span></div>';
+                
+                popup.appendChild(item);
+            });
+        } else {
+            popup.innerHTML = '<div class="loitk">Không tìm thấy bài hát nào!</div>';
+        }
+        
+        popup.style.display = "block";
+    });
+
+    document.addEventListener("click", function(event) {
+        if (!oTimKiem.contains(event.target) && !popup.contains(event.target)) {
+            popup.style.display = "none";
+        }
+    });
+});
